@@ -70,5 +70,7 @@ In a separate terminal execute:
     2. RPC-URL: http://localhost:8545
     3. Chain-ID: 31337
 ##### 6.3 Finished Setup and Data should be displayed    
+##### 6.3 Add Data 
+- Import Hardhat test account (public/private key) to MetaMask and sign the transactions
 ### License
 Released under the MIT License. Feel free to use, modify, and distribute this implementation in accordance with the terms of the license.
