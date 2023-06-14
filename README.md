@@ -1,4 +1,4 @@
-# PhramaPort
+# PharmaPort
 PharmaPort is blockchain based decentralised app (DApp) which should act as a unified interface to current track & trace solutions and provide additional functionalities. Centralised registries, which are currently maintained by central organisations like EMA (European Medicine Agency), such as verified stakeholders, managing marketing authorization holders, certifications such as Good Manufacturing Practice (GMP)/Good Distribution Practice (GDP), or a list of verified wholesale distributors, will be stored in a decentralised manner and made available for further usage in current track & trace solutions. 
 This data should be able to be easily accessed and processed by authorised entities, thus creating a decentralised system for the European market. 
 
