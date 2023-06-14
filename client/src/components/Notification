@@ -1,0 +1,20 @@
+import React from 'react';
+import { store } from 'react-notifications-component';
+
+export const Notification = () => {
+  const addNotification = (message, title, type) => {
+    store.addNotification({
+      title: title,
+      type: type,
+      container: 'top-right',
+      message: message,
+      dismiss: {
+        duration: 10000,
+        pauseOnHover: true,
+        onScreen: true,
+      },
+    })
+  }
+
+  return { addNotification}; 
+}

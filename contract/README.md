@@ -10,9 +10,12 @@ https://www.youtube.com/watch?v=3681ZYbDSSk&t=2251s
 https://www.dappuniversity.com/articles/the-ultimate-ethereum-dapp-tutorial
 
 
+tutorials by Dapp University: 
+https://www.youtube.com/watch?v=X1ahXNYkpL8 -> Amazon Clone
+https://www.youtube.com/watch?v=GRhO5wdLDMI&list=PLrZy0iGfENIWTY7yLvtQFis9wSqRBOCxE&index=5&t=2584s -> Discord Clone with nft
 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
-how i set up project: 
+set up project: 
 
 mkdir contract
 cd .\contract\
@@ -32,6 +35,7 @@ npx hardhat run scripts/deploy.js --network localhost
 
 frontend:
 cd ..
+cd .\client\
 npm run start
 
 
