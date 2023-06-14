@@ -179,7 +179,6 @@ contract Pharmaport {
         emit ListCompetentAuthority(_countryCode, _name);
     }
 
-
     // Function to add a product
     function addProduct(
         string memory _name,
@@ -216,6 +215,7 @@ contract Pharmaport {
         emit NewAuthorisation(_S_id, msg.sender, _authorisationType, _content);
 
     }
+     // Function to add a compliance report
 
     function addComplianceReport(
         uint256 _S_id,          // ID of the Stakeholder 
@@ -223,15 +223,15 @@ contract Pharmaport {
         string memory _content,  // content of the compliance report
         string memory _complianceType,  // type of compliance report
         bool _compliance        
-) public onlyCompetentAuthorities {
+    ) public onlyCompetentAuthorities {
 
-        complianceReportCount++;
-        ComplianceReport memory newComplianceReport = ComplianceReport(complianceReportCount, msg.sender, _S_id, _C_id, block.timestamp, _content, _complianceType, _compliance, true);
-        complianceReports[complianceReportCount] = newComplianceReport;
-        emit ComplianceReportAdded(complianceReportCount, msg.sender, _S_id, _C_id, _content, _complianceType, _compliance);
+            complianceReportCount++;
+            ComplianceReport memory newComplianceReport = ComplianceReport(complianceReportCount, msg.sender, _S_id, _C_id, block.timestamp, _content, _complianceType, _compliance, true);
+            complianceReports[complianceReportCount] = newComplianceReport;
+            emit ComplianceReportAdded(complianceReportCount, msg.sender, _S_id, _C_id, _content, _complianceType, _compliance);
 
-}
-    
+    }
+        
     function setInactive(uint256 id, string memory structType) public onlyCompetentAuthorities {
         if (keccak256(abi.encodePacked(structType)) == keccak256(abi.encodePacked("Stakeholder"))) {
             require(id > 0 && id <= stakeholderCount, "Invalid stakeholder id");
