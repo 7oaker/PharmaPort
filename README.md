@@ -38,12 +38,13 @@ This data should be able to be easily accessed and processed by authorised entit
 ### 1. Clone/Download the Repository
 
 ### 2. Install Dependencies:
-Fronted:
-`cd .\client\`
-`$ npm install`
-Backend:
+- Backend (Smart Contract | Hardhat):
 `cd .\contract\`
 `$ npm install`
+- Fronted (Reactjs)
+`cd .\client\`
+`$ npm install`
+
 ### 3. Run tests (optional)
 `cd .\contract\`
 `$ npx hardhat test`
@@ -68,6 +69,6 @@ In a separate terminal execute:
     1. Network Name: Localhost 8545
     2. RPC-URL: http://localhost:8545
     3. Chain-ID: 31337
-    
+##### 6.3 Finished Setup and Data should be displayed    
 ### License
 Released under the MIT License. Feel free to use, modify, and distribute this implementation in accordance with the terms of the license.
