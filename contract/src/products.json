@@ -1,0 +1,47 @@
+{
+    "pharmaceuticalProducts": [
+      {
+        "pid": 1,
+        "name": "Amprenavir",
+        "EMEA": "EMEA/H/C/1234567",
+        "NRM": "12345678A",
+        "description": "Amprenavir is available in tablet form and contains 500mg of the active ingredient. It is an antiretroviral medication used in the treatment of HIV infection."
+      },
+      {
+        "pid": 2,
+        "name": "Ibuprofen",
+        "EMEA": "EMEA/H/C/2345678",
+        "NRM": "23456789B",
+        "description": "Ibuprofen is available in capsule form and contains 250mg of the active ingredient. It is a nonsteroidal anti-inflammatory drug (NSAID) commonly used for pain relief and reducing inflammation."
+      },
+      {
+        "pid": 3,
+        "name": "Fenofibrate",
+        "EMEA": "EMEA/H/C/3456789",
+        "NRM": "34567890C",
+        "description": "Fenofibrate is available in tablet form and contains 160mg of the active ingredient. It is used to lower cholesterol and triglyceride levels in the blood."
+      },
+      {
+        "pid": 4,
+        "name": "Cyclosporine",
+        "EMEA": "EMEA/H/C/4567890",
+        "NRM": "45678901D",
+        "description": "Cyclosporine is available in oral capsule form and contains 100mg of the active ingredient. It is an immunosuppressive drug used to prevent organ rejection after transplantation."
+      },
+      {
+        "pid": 5,
+        "name": "Ritonavir",
+        "EMEA": "EMEA/H/C/5678901",
+        "NRM": "56789012E",
+        "description": "Ritonavir is available in tablet form and contains 100mg of the active ingredient. It is an antiretroviral medication used in the treatment of HIV infection."
+      },
+      {
+        "pid": 6,
+        "name": "Saquinavir",
+        "EMEA": "EMEA/H/C/6789012",
+        "NRM": "67890123F",
+        "description": "Saquinavir is available in capsule form and contains 500mg of the active ingredient. It is an antiretroviral medication used in the treatment of HIV infection."
+    }
+]
+}
+    

@@ -1,0 +1,242 @@
+{
+    "competentAuthorities": [
+      {
+        "id": 1,
+        "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "countryCode": "AT",
+        "name": "Austrian Agency for Health and Food Safety",
+        "contactDetails": "Spargelfeldstraße 191; 1220 Wien; Austria; Tel. +43 5 0555-0; Fax +43 5 0555-22019; www.ages.at"
+      },
+      {
+        "id": 2,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "BE",
+        "name": "Federal Agency for Medicines and Health Products (FAMHP)",
+        "contactDetails": "Avenue Galilée 5/03; 1210 Brussels; Belgium; Tel. +32 2 528 40 00; E-mail: welcome@fagg-afmps.be; www.famhp.be"
+      },
+      {
+        "id": 3,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "BG",
+        "name": "Bulgarian Drug Agency",
+        "contactDetails": "8 Damyan Gruev Str.; Sofia 1303; Bulgaria; Tel. +359 2 890 35 55; Fax +359 2 890 34 34; E-mail: bda@bda.bg; www.bda.bg"
+      },
+      {
+        "id": 4,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "HR",
+        "name": "Agency for medicinal products and medical devices of Croatia",
+        "contactDetails": "Ksaverska cesta 4; 10 000 Zagreb; Croatia; Tel. +385 1 4884 100; Fax: +385 1 4884 110; E-mail: halmed@halmed.hr; www.halmed.hr"
+      },
+      {
+        "id": 5,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "CY",
+        "name": "Ministry of Health - Pharmaceutical Services",
+        "contactDetails": "Pharmaceutical Services; Ministry of Health; 1475 Nicosia; Cyprus; Tel: +357 22608620; Fax: +357 22608649; E-mail: phscentral@phs.moh.gov.cy; www.moh.gov.cy/phs"
+      },
+      {
+        "id": 6,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "CZ",
+        "name": "State Institute for Drug Control",
+        "contactDetails": "Srobárova 48; 100 41 Praha 10; Czechia; Tel. +420 272 185 333; Fax +420 272 185 756; E-mail: infs@sukl.cz; www.sukl.cz"
+      },
+      {
+        "id": 7,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "DK",
+        "name": "Danish Medicines Agency",
+        "contactDetails": "Axel Heides Gade 1; 2300 København S; Denmark; Tel. +45 7222 7400; E-mail: dkma@dkma.dk; www.laegemiddelstyrelsen.dk"
+      },
+      {
+        "id": 8,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "EE",
+        "name": "State Agency of Medicines",
+        "contactDetails": "1 Nooruse Street; 50411 Tartu; Estonia; Tel. +372 737 41 40; Fax +372 737 41 42; E-mail: info@ravimiamet.ee; www.ravimiamet.ee"
+      },
+      {
+        "id": 9,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "FI",
+        "name": "Finnish Medicines Agency",
+        "contactDetails": "P.O. Box 55; FI-00034 FIMEA; Finland; Tel. +358 29 522 3341; Fax +358 29 522 3002; www.fimea.fi"
+      },
+      {
+        "id": 10,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "FR",
+        "name": "National Agency for the Safety of Medicine and Health Products",
+        "contactDetails": "143-147 bd Anatole France; 93285 Saint Denis cedex; France; Tel. +33 1 55 87 30 00; www.ansm.sante.fr"
+      },
+      {
+        "id": 11,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "DE",
+        "name": "Federal Institute for Drugs and Medical Devices",
+        "contactDetails": "Kurt-Georg-Kiesinger-Allee 3; 53175 Bonn; Germany; Tel. +49 (0)228-207-30; Fax +49 (0)228-207-5207; E-mail: poststelle@bfarm.de; www.bfarm.de"
+      },
+      {
+        "id": 12,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "DE",
+        "name": "Paul Ehrlich Institute",
+        "contactDetails": "Paul-Ehrlich-Straße 51-59; 63225 Langen; Germany; Tel. +49 6103 77 0; Fax +49 6103 77 1234; E-mail: pei@pei.de; www.pei.de/"
+      },
+      {
+        "id": 13,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "GR",
+        "name": "National Organization for Medicines",
+        "contactDetails": "Messogion Avenue 284; 15562 Athens; Greece; Tel. +30 213 2040 200; Fax +30 210 6545 535; E-mail: relation@eof.gr; www.eof.gr"
+      },
+      {
+        "id": 14,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "HU",
+        "name": "National Institute of Pharmacy and Nutrition",
+        "contactDetails": "Szabolcs Utca 33; Budapest XIII; Budapest 1135; Hungary; Tel. +36 1 88 69-300; Fax +36 1 88 69-460; E-mail: ogyei@ogyei.gov.hu; www.ogyei.gov.hu"
+      },
+      {
+        "id": 15,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "IS",
+        "name": "Icelandic Medicines Agency",
+        "contactDetails": "Vínlandsleið 14; 113 Reykjavík; Iceland; Tel. +354 520 2100; Fax +354 561 2170; E-mail: ima@ima.is; www.ima.is"
+      },
+      {
+        "id": 16,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "IE",
+        "name": "Health Products Regulatory Authority (HPRA)",
+        "contactDetails": "Kevin O'Malley House,; Earlsfort Centre,; Earlsfort Terrace,; Dublin 2,; Ireland; Tel. +353 1 676 4971; Fax +353 1 676 7836; E-mail: info@hpra.ie; www.hpra.ie"
+      },
+      {
+        "id": 17,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "IT",
+        "name": "Italian Medicines Agency",
+        "contactDetails": "Via del Tritone, 181; 00187 Roma; Italy; Tel. +39 06 5978401; Fax +39 06 59784312; www.aifa.gov.it"
+      },
+      {
+        "id": 18,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "LV",
+        "name": "State Agency of Medicines",
+        "contactDetails": "15 Jersikas Street; 1003 Riga; Latvia; Tel. +371 7078424; Fax +371 7078428; E-mail: info@zva.gov.lv; www.zva.gov.lv"
+      },
+      {
+        "id": 19,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "LI",
+        "name": "Office of Health / Department of Pharmaceuticals",
+        "contactDetails": "Äulestr 512; 9490 Vaduz; Liechtenstein; www.llv.li"
+      },
+      {
+        "id": 20,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "LT",
+        "name": "State Medicines Control Agency",
+        "contactDetails": "Žirmūnų g. 139A; 09120 Vilnius; Lithuania; Tel. +370 5 263 9264; Tel +370 5 263 9265; E-mail: vvkt@vvkt.lt; www.vvkt.lt"
+      },
+      {
+        "id": 21,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "LU",
+        "name": "Ministry of Health",
+        "contactDetails": "Allée Marconi; 2120 Luxembourg; Luxembourg; E-mail: ministere-sante@ms.etat.lu; www.sante.lu"
+      },
+      {
+        "id": 22,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "MT",
+        "name": "Malta Medicines Authority (MMA)",
+        "contactDetails": "Sir Temi Żammit Buildings; Malta Life Sciences Park; San Ġwann; SĠN 3000; Malta; Tel. +356 23439000; Fax +356 23439161; E-mail: info.medicinesauthority@gov.mt; www.medicinesauthority.gov.mt"
+      },
+      {
+        "id": 23,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "NL",
+        "name": "Medicines Evaluation Board",
+        "contactDetails": "Graadt van Roggenweg 500; 3531 AH Utrecht; The Netherlands; Tel. +31 (0) 88 224 8000; Fax +31 (0) 88 224 8001; Contact: Submit your question"
+      },
+      {
+        "id": 24,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "NL",
+        "name": "Healthcare and Youth Care Inspectorate, Ministry of Health, Welfare and Sport",
+        "contactDetails": "Stadsplateau 1; 3521 AZ Utrecht; The Netherlands; Tel. +31 88 120 5000; Fax +31 88 120 5001; E-mail: meldpunt@igz.nl; www.igj.nl"
+      },
+      {
+        "id": 25,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "NO",
+        "name": "Norwegian Medicines Agency",
+        "contactDetails": "Postboks 240 Skøyen; 0213 Oslo; Norway; Tel. +47 22 89 77 00; E-mail: post@noma.no; https://legemiddelverket.no"
+      },
+      {
+        "id": 26,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "PL",
+        "name": "Office for Registration of Medicinal Products, Medical Devices and Biocidal Products",
+        "contactDetails": "Al. Jerozolimskie 181C; 02-222 Warsaw; Poland; Tel. +48 (22) 492 11 00; Fax +48 (22) 492 11 09; www.urpl.gov.pl"
+      },
+      {
+        "id": 27,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "PL",
+        "name": "Chief Pharmaceutical Inspectorate",
+        "contactDetails": "Senatorska 12; 00-082 Warsaw; Poland; Tel. +48 22 831 21 31; Fax +48 22 831 02 44; E-mail: gif@gif.gov.pl; www.gif.gov.pl"
+      },
+      {
+        "id": 28,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "PT",
+        "name": "National Authority of Medicines and Health Products",
+        "contactDetails": "Parque de Saúde de Lisboa - Avenida do Brasil, 53; 1749-004 Lisboa; Portugal; Tel. +351 217987100; Fax +351 217987316; E-mail: infarmed@infarmed.pt; www.infarmed.pt"
+      },
+      {
+        "id": 29,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "RO",
+        "name": "National Authority of Medicines and Medical Devices of Romania",
+        "contactDetails": "Str. Aviator Sanatescu 48; 011478 Bucharest; Romania; Tel. +4021 317 11 00; Fax +4021 316 34 97; www.anm.ro"
+      },
+      {
+        "id": 30,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "SK",
+        "name": "State Institute for Drug Control",
+        "contactDetails": "Kvetná 11; 825 08 Bratislava 26; Slovakia; Tel. +421 2 5070 1111; Fax +421 2 5556 4127; E-mail: sukl@sukl.sk; www.sukl.sk"
+      },
+      {
+        "id": 31,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "SI",
+        "name": "Agency for Medicinal Products and Medical Devices of the Republic of Slovenia",
+        "contactDetails": "Slovenčeva ulica 22; 1000 Ljubljana; Slovenia; Tel. + 38 6 8 2000 500; Fax + 38 6 8 2000 510; E-mail: info@jazmp.si; www.jazmp.si"
+      },
+      {
+        "id": 32,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "ES",
+        "name": "Spanish Agency for Medicines and Health Products",
+        "contactDetails": "Parque Empresarial; Las Mercedes Edificio 8C/.; Campezo, 1; 28022 Madrid; Spain; www.aemps.gob.es"
+      },
+      {
+        "id": 33,
+        "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "countryCode": "SE",
+        "name": "Swedish Medical Products Agency",
+        "contactDetails": "Dag Hammarskjölds väg 42 / Box 26; 751 03 Uppsala; Sweden; Tel. +46 18 17 46 00; Fax +46 18 54 85 66; E-mail: registrator@mpa.se; www.lakemedelsverket.se"
+      },
+      {
+        "id": 34,
+        "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266", 
+        "countryCode": "NE",
+        "name": "European Medicines Agency",
+        "contactDetails": "Domenico Scarlattilaan 6; 1083 HS Amsterdam; The Netherlands; Tel. +31 (0)88 781 6000; E-mail: withdrawnproducts@ema.europa.eu; www.ema.europa.eu"
+      }
+    ]
+  }

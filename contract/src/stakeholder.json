@@ -1,0 +1,103 @@
+{
+    "stakeholder": [
+      {
+        "id": 1,
+        "GID": "ORG-100011548",
+        "name": "Lonza AG",
+        "GLN": "0614141000005",
+        "countryCode": "AT",
+        "postCode": "3930",
+        "street": "Rottenstrasse 6",
+        "category": "manufacturer",
+        "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+      },
+      {
+        "id": 2,
+        "GID": "ORG-100011549",
+        "name": "ABC Pharmaceuticals",
+        "GLN": "0614141000006",
+        "countryCode": "US",
+        "postCode": "12345",
+        "street": "Main Street 123",
+        "category": "manufacturer",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      },
+      {
+        "id": 3,
+        "GID": "ORG-100011550",
+        "name": "XYZ Manufacturing",
+        "GLN": "0614141000007",
+        "countryCode": "GB",
+        "postCode": "AB12CD",
+        "street": "Industrial Avenue 456",
+        "category": "manufacturer",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      },
+      {
+        "id": 4,
+        "GID": "ORG-100011551",
+        "name": "Wholesale Mart",
+        "GLN": "0614141000008",
+        "countryCode": "DE",
+        "postCode": "98765",
+        "street": "Wholesale Street 789",
+        "category": "wholesaler",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      },
+      {
+        "id": 5,
+        "GID": "ORG-100011552",
+        "name": "Global Traders",
+        "GLN": "0614141000009",
+        "countryCode": "FR",
+        "postCode": "75001",
+        "street": "Trade Avenue 321",
+        "category": "wholesaler",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      },
+      {
+        "id": 6,
+        "GID": "ORG-100011553",
+        "name": "PharmaCare",
+        "GLN": "0614141000010",
+        "countryCode": "ES",
+        "postCode": "28001",
+        "street": "Pharmacy Road 567",
+        "category": "wholesaler",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      },
+      {
+        "id": 7,
+        "GID": "ORG-100011554",
+        "name": "MediCo",
+        "GLN": "0614141000011",
+        "countryCode": "IT",
+        "postCode": "00100",
+        "street": "Health Street 890",
+        "category": "pharmacy",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      },
+      {
+        "id": 8,
+        "GID": "ORG-100011555",
+        "name": "Pharma Plus",
+        "GLN": "0614141000012",
+        "countryCode": "CA",
+        "postCode": "1425",
+        "street": "Pharmacy Avenue 345",
+        "category": "pharmacy",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      },
+      {
+        "id": 9,
+        "GID": "ORG-100011556",
+        "name": "HealthPoint",
+        "GLN": "0614141000013",
+        "countryCode": "AT",
+        "postCode": "3432",
+        "street": "St. Gallen an der Donau",
+        "category": "pharmacy",
+        "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      }
+    ]
+}

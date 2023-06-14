@@ -9,7 +9,9 @@
     "bootstrap": "^5.2.3",
     "ethers": "5.4",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-notifications-component": "^4.0.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

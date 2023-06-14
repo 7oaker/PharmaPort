@@ -1,179 +1,176 @@
 import React, {useState, useEffect} from 'react';
 import { ethers } from 'ethers';
 import './App.css';
-
+//got from artefacts js abi
+import Pharmaport from './abis/Pharmaport.json'
+// Config
+import config from './config.json'
+// Components
+import Navigation from './components/Navigation'
+import Section from './components/Section'
+import StakholderCard from './components/StakholderCard'
+import StakeholderForm from './components/Forms/StakeholderForm'
+import ProductList from './components/ProductList'
+import CAList from './components/CAList'
+import 'react-notifications-component/dist/theme.css'
+import { ReactNotifications, Store } from 'react-notifications-component'
 
 
 function App() {
 
-  const [greet, setGreet] = useState('');
-  const [balance, setBalance] = useState();
-  const [depositValue, setDepositValue] = useState('');
-  const [greetingValue, setGreetingValue] = useState('');
+  const [provider, setProvider] = useState(null)
+  const [pharmaport, setPharmaport] = useState(null)
 
-  // A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
-const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
-const signer = provider.getSigner()
-const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  const [account, setAccount] = useState(null)
 
+  const [manufacturer, setManufacturer] = useState(null)
+  const [wholesaler, setWholesaler] = useState(null) 
+  const [pharmacy, setPharmacy] = useState(null)
 
-// The ERC-20 Contract ABI, which is a common contract interface
-// for tokens (this is the Human-Readable ABI format) -> to call functions of smart contract
-//got from artefacts js abi
-const ABI = [
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_greeting",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-  },
-  {
-    "inputs": [],
-    "name": "deposit",
-    "outputs": [],
-    "stateMutability": "payable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "greet",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_greeting",
-        "type": "string"
-      }
-    ],
-    "name": "setGreeting",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  }
-];
+  const [stakeholder, setStakeholder] = useState({})
+  const [toggle, setToggle] = useState(false)
+  const [showStakeholderForm, setShowStakeholderForm] = useState(false)
+  const [MAs, setMAs] = useState([])
+  const [products, setProducts] = useState([])
+  const [CAs, setCAs] = useState([])
+  const [CRs, setCRs] = useState([])
 
-// The Contract object
-const contract = new ethers.Contract(contractAddress, ABI, signer);
-
-
-
-
-
-
-// MetaMask requires requesting permission to connect users accounts
-useEffect(() =>{
-  const connectWallet = async() =>{
-    await provider.send("eth_requestAccounts", []);
-
-  }
-
-  const getBalance = async() =>{
-// Get the balance of an account (by address or ENS name, if supported by network)
-const balance = await provider.getBalance(contractAddress)
-
-const balanceFormatted = ethers.utils.formatEther(balance)
-setBalance(balanceFormatted)  
-}
-
-const getGreeting = async() =>{
-  // Get the balance of an account (by address or ENS name, if supported by network)
-  const greeting = await contract.greet();
-  setGreet(greeting);
+  const togglePop = (stakeholder) => {
+    setStakeholder(stakeholder)
+    toggle ? setToggle(false) : setToggle(true)
+  };
  
+  
+  const myNotification = (message, title, type) => {
+    Store.addNotification({
+      title: title,
+      type: type,
+      container: 'top-right',
+      message: message,
+      dismiss: {
+        duration: 10000,
+        pauseOnHover: true,
+        onScreen: true,
+      },
+    });
+  };
+ 
+ 
+// A Web3Provider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
+const loadBlockchainData = async () => {
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  setProvider(provider)
+  const network = await provider.getNetwork()
+
+  const pharmaport = new ethers.Contract(config[network.chainId].pharmaport.address, Pharmaport, provider)
+  setPharmaport(pharmaport)
+
+//-----------------------------------------------------
+//load stakeholders 
+const stakeholders = await pharmaport.getAllStakeholders();
+console.log(stakeholders);
+
+//load Authorisations
+const MAs = await pharmaport.getAllAuthorisations();
+setMAs(MAs);
+
+//load Compliance Reports
+const CRs = await pharmaport.getAllComplianceReports();
+setCRs(CRs);
+
+//Load medical products
+const products = await pharmaport.getAllProducts();
+setProducts(products);
+
+//Load competent authorities
+const CAs = await pharmaport.getAllCompetentAuthorities();
+setCAs(CAs);
+//------------------------------------------------------
+
+
+  const manufacturer = stakeholders.filter((stakeholder) => stakeholder.category === 'manufacturer')
+  const wholesaler = stakeholders.filter((stakeholder) => stakeholder.category === 'wholesaler')
+  const pharmacy = stakeholders.filter((stakeholder) => stakeholder.category === 'pharmacy')
+
+  setManufacturer(manufacturer)
+  setWholesaler(wholesaler)
+  setPharmacy(pharmacy)
+  
+
+pharmaport.on("Success", (actionType, message, sender)=>{
+  let transferEvent ={
+    actionType: actionType,
+    message: message,
+    sender: sender,
+      
   }
-
-  connectWallet().catch(console.error);
-  getBalance().catch(console.error);
-  getGreeting().catch(console.error);
-
-
+  console.log(JSON.stringify(transferEvent, null, 4))
 
 })
+}
+
+useEffect(() => {
+  loadBlockchainData()
+  
+
+}, [showStakeholderForm])
+
+    const showStakeholderFormPop = () => {
+      showStakeholderForm ? setShowStakeholderForm(false) : setShowStakeholderForm(true)
+      
+    }
 
 
 
-
-
-
-
-  const handleDepositChange =(e) =>{
-    setDepositValue(e.target.value);
+  
+    async function getTransfer(){
   }
+return (
+  <div>
+         
+    <ReactNotifications />
 
-  const handleGreetingChange =(e) =>{
-    setGreetingValue(e.target.value);
+    <Navigation account={account} setAccount={setAccount} />
+    
+    <button className='button__globe' onClick={showStakeholderFormPop}>
+            Add Stakeholder
+          </button>
 
-  }
+          
+          
+    <h2>Stakeholder List</h2>
 
-  const handleDepositSubmit = async (e) =>{
-    e.preventDefault();
-    const ethValue =  ethers.utils.parseEther(depositValue);
-    const depositEth = await contract.deposit({value: ethValue});
-    await depositEth.wait();
-    const balance = await provider.getBalance(contractAddress)
-    const balanceFormatted = ethers.utils.formatEther(balance)
-    setBalance(balanceFormatted)  
-    setDepositValue(0);
+    {manufacturer && wholesaler && pharmacy && ( //waits till the data from blockchain is loaded
+      <>
+        <Section title={"Manufacturer"} stakeholders={manufacturer} togglePop={togglePop} />
+        <Section title={"Wholesaler"} stakeholders={wholesaler} togglePop={togglePop} />
+        <Section title={"Pharmacies"} stakeholders={pharmacy} togglePop={togglePop} />
+      </>
+    )}
 
-  }
 
-  const handleGreetingSubmit = async (e) =>{
-    e.preventDefault();
-    const greetingUpdate = await contract.setGreeting(greetingValue);
-    await greetingUpdate.wait()
-    setGreet(greetingValue);
-    setGreetingValue('');
-    console.log(greetingValue);
-  }
-    return (
-      <div className="container">
-        <div className="container">
-          <div className="row mt-5">
-            <div className="col">
-              <h3>{greet}</h3>
-              <p>Contract balance: {balance} ETH</p>
-            </div>
-            <div className="col">
-            <form onSubmit={handleDepositSubmit}>
-              <div className="mb-3">
-                <label htmlFor="number1" className="form-label">Deposit ETH</label>
-                <input type="number" className="form-control" id="number1" placeholder='0' onChange={handleDepositChange} value = {depositValue} />
-                <div id="emailHelp" className="form-text">We'll never share your credentials with anyone else.</div>
-              </div>
-             
-              <button type="submit" className="btn btn-primary">Deposit</button>
-            </form>
+    {showStakeholderForm && (
+      <StakeholderForm provider={provider} account={account} pharmaport={pharmaport} showStakeholderFormPop={showStakeholderFormPop}/>
+    )}
+    {toggle && (
+      <StakholderCard stakeholder={stakeholder} marketingAuthorisations={MAs} complianceReports={CRs} competentAuthorities={CAs} myProducts={products} provider={provider} account={account} pharmaport={pharmaport} togglePop={togglePop} />
+    )}
 
-            <form className ="mt-5" onSubmit={handleGreetingSubmit}>
-              <div className="mb-3">
-                <label htmlFor="greeting1" className="form-label">Greeting Change</label>
-                <input type="text" className="form-control" id="greeting1" onChange={handleGreetingChange} value = {greetingValue} />
-                <div id="emailHelp" className="form-text">We'll never share your credentials with anyone else.</div>
-              </div>
-             
-              <button type="submit" className="btn btn-primary">Change</button>
-            </form>
-            </div>
-          </div>
-        </div>
+    <h2>Medical Product List</h2>
+    {(
+      <ProductList  title={"Product List"} myProducts={products} />
+
+    )}
+    <h2>Competent Authorities</h2>
+    {(
+      <CAList  title={"Competent Authorities"} competentAuthorities={CAs} />
+
+    )}
+
       </div>
-  );
+      
+    );
 }
 
 export default App;
