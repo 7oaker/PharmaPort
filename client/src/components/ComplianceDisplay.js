@@ -5,6 +5,7 @@ import gmp from '../assets/complianceIcons/gmp.png';
 
 const ComplianceDisplay = ({ value, type }) => {
   return (
+    //switch icon based on type of compliance report
     <div className='complianceDisplay'>
       {value === false ? (
         <img src={noncomp} width='60px' height='60px' alt='Noncompliant' />

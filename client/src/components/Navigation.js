@@ -10,8 +10,6 @@ const Navigation = ({ account, setAccount }) => {
 
     return (
         <nav>
-           
-
             <div className='nav__brand'>
             <img className="nav__logo" src={logo}></img>
                 <h1>Pharmaport</h1>

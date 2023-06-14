@@ -20,13 +20,10 @@ function App() {
 
   const [provider, setProvider] = useState(null)
   const [pharmaport, setPharmaport] = useState(null)
-
   const [account, setAccount] = useState(null)
-
   const [manufacturer, setManufacturer] = useState(null)
   const [wholesaler, setWholesaler] = useState(null) 
   const [pharmacy, setPharmacy] = useState(null)
-
   const [stakeholder, setStakeholder] = useState({})
   const [toggle, setToggle] = useState(false)
   const [showStakeholderForm, setShowStakeholderForm] = useState(false)
@@ -89,13 +86,13 @@ setCAs(CAs);
 //------------------------------------------------------
 
 
-  const manufacturer = stakeholders.filter((stakeholder) => stakeholder.category === 'manufacturer')
-  const wholesaler = stakeholders.filter((stakeholder) => stakeholder.category === 'wholesaler')
-  const pharmacy = stakeholders.filter((stakeholder) => stakeholder.category === 'pharmacy')
+const manufacturer = stakeholders.filter((stakeholder) => stakeholder.category === 'manufacturer')
+const wholesaler = stakeholders.filter((stakeholder) => stakeholder.category === 'wholesaler')
+const pharmacy = stakeholders.filter((stakeholder) => stakeholder.category === 'pharmacy')
 
-  setManufacturer(manufacturer)
-  setWholesaler(wholesaler)
-  setPharmacy(pharmacy)
+setManufacturer(manufacturer)
+setWholesaler(wholesaler)
+setPharmacy(pharmacy)
   
 
 pharmaport.on("Success", (actionType, message, sender)=>{
@@ -120,9 +117,6 @@ useEffect(() => {
       showStakeholderForm ? setShowStakeholderForm(false) : setShowStakeholderForm(true)
       
     }
-
-
-
   
     async function getTransfer(){
   }
@@ -136,8 +130,6 @@ return (
     <button className='button__globe' onClick={showStakeholderFormPop}>
             Add Stakeholder
           </button>
-
-          
           
     <h2>Stakeholder List</h2>
 
@@ -148,7 +140,6 @@ return (
         <Section title={"Pharmacies"} stakeholders={pharmacy} togglePop={togglePop} />
       </>
     )}
-
 
     {showStakeholderForm && (
       <StakeholderForm provider={provider} account={account} pharmaport={pharmaport} showStakeholderFormPop={showStakeholderFormPop}/>
