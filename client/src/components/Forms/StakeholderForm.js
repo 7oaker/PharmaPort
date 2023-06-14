@@ -45,14 +45,13 @@ const StakeholderForm = ({ provider, account, pharmaport , showStakeholderFormPo
       try {
         const signer = provider.getSigner();
         let transaction = await pharmaport.connect(signer).listStakeholder(
-          //stakeholder.id,
           stakeholder.gid,
           stakeholder.name,
           stakeholder.gln,
           stakeholder.countryCode,
           stakeholder.postCode,
           stakeholder.street,
-          stakeholder.category,
+          stakeholder.category,//ethers.utils.getAddress(walletAddress);
           stakeholder.wallet        );
             await transaction.wait()
 
@@ -71,7 +70,7 @@ const StakeholderForm = ({ provider, account, pharmaport , showStakeholderFormPo
           wallet: ''
         });
   
-        
+       
       } catch (error) {
         console.error(error);
         // Show error message or trigger any other actions
@@ -194,6 +193,35 @@ const StakeholderForm = ({ provider, account, pharmaport , showStakeholderFormPo
       </div></div>
     );
 
+    /*
+    
+    <form onSubmit={handleSubmit}>
+             
+          <label htmlFor="gid">GID:</label>
+          <input type="text" id="gid" name="gid" value={stakeholder.gid} onChange={handleInputChange} />
+    
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" value={stakeholder.name} onChange={handleInputChange} />
+    
+          <label htmlFor="gln">GLN:</label>
+          <input type="text" id="gln" name="gln" value={stakeholder.gln} onChange={handleInputChange} />
+    
+          <label htmlFor="countryCode">Country Code:</label>
+          <input type="text" id="countryCode" name="countryCode" value={stakeholder.countryCode} onChange={handleInputChange} />
+    
+          <label htmlFor="postCode">Post Code:</label>
+          <input type="text" id="postCode" name="postCode" value={stakeholder.postCode} onChange={handleInputChange} />
+    
+          <label htmlFor="street">Street:</label>
+          <input type="text" id="street" name="street" value={stakeholder.street} onChange={handleInputChange} />
+    
+          <label htmlFor="category">Category:</label>
+          <input type="text" id="category" name="category" value={stakeholder.category} onChange={handleInputChange} />
+    
+          
+          <button type="submit">Add Stakeholder</button>
+        </form>
+    */
     
     };
     

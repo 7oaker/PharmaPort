@@ -192,7 +192,8 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
     <p>ID: {MA.P_id.toString()} | {myProducts[MA.P_id-1].name}<br></br>EMEA: {myProducts[MA.P_id-1].EMEA} <br></br>NRM: {myProducts[MA.P_id-1].NRM}<br></br>Description: {myProducts[MA.P_id-1].description} </p>
     <b>Authorizing Competent Authority ({MA.authoriser})</b>
     <p>ID: {MA.C_id.toString()} | {competentAuthorities[MA.C_id-1].name}<br></br>Country Code: {competentAuthorities[MA.C_id-1].countryCode}<br></br>Contact Details: {competentAuthorities[MA.C_id-1].contactDetails}<br></br></p>
-    
+    <p>Status: {MA.isActive ? 'Active' : 'Inactive'}</p>  
+
     
   </div>
 ))}

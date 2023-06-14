@@ -37,7 +37,7 @@ const Section = ({ title, stakeholders, togglePop }) => {
                     second: 'numeric',
                   })}
               </strong>
-                           
+              <p>Status: {stakeholder.isActive ? 'Active' : 'Inactive'}</p>  
                             
                         </div>
                     </div>
