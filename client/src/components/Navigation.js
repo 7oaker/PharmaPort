@@ -11,7 +11,7 @@ const Navigation = ({ account, setAccount }) => {
     return (
         <nav>
             <div className='nav__brand'>
-            <img className="nav__logo" src={logo}></img>
+                <img className="nav__logo" src={logo}></img>
                 <h1>Pharmaport</h1>
             </div>
 
@@ -25,7 +25,7 @@ const Navigation = ({ account, setAccount }) => {
                     type="button"
                     className='nav__connect'
                 >
-                    {account.slice(0, 6) + '...' + account.slice(38, 42)} 
+                    {account.slice(0, 6) + '...' + account.slice(38, 42)}
                 </button>
             ) : (
                 <button

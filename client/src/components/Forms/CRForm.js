@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {Store } from 'react-notifications-component'
+import { Store } from 'react-notifications-component'
 
 const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceReportFormPop }) => {
-  
+
   const myNotification = (message, title, type) => {
     Store.addNotification({
       title: title,
@@ -19,7 +19,7 @@ const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceRepo
       },
     });
   };
-  
+
   const [complianceReport, setComplianceReport] = useState({
     sId: stakeholder.id,
     cId: '',
@@ -45,7 +45,7 @@ const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceRepo
         complianceReport.compliance
       );
       await transaction.wait();
-      myNotification(`Compliance Report for: ${complianceReport.complianceType} added to stakeholder: ${complianceReport.sId}`,'Notification','success',);
+      myNotification(`Compliance Report for: ${complianceReport.complianceType} added to stakeholder: ${complianceReport.sId}`, 'Notification', 'success',);
 
       // Clear form fields after successful submission
       setComplianceReport({
@@ -117,7 +117,7 @@ const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceRepo
         >
           <option value="true">True</option>
           <option value="false">False</option>
-          </Form.Select>
+        </Form.Select>
       </Form.Group>
 
       <Button variant="primary" type="submit">

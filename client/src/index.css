@@ -44,12 +44,14 @@ nav {
 
   background-color: var(--clr-bunker);
 }
+
 .nav__logo {
   display: inline-block;
   vertical-align: middle;
   width: 100px;
   height: 100px;
 }
+
 .nav__brand {
   display: flex;
   justify-content: center;
@@ -110,7 +112,7 @@ nav {
 
   background-color: #4a77e0;
   color: var(--clr-white);
-  
+
   border: none;
   border-radius: 4px;
 
@@ -281,7 +283,7 @@ nav {
   margin-left: 40px;
 }
 
-.box__ma__container { 
+.box__ma__container {
   /*max-width: 300px;*/
   height: 90%;
 
@@ -337,6 +339,7 @@ nav {
   background-color: #131921;
 
 }
+
 .list__element {
   padding: 5px;
   border: 1px solid #131921;
@@ -347,9 +350,11 @@ nav {
 
 
 }
+
 .list__element:hover {
   box-shadow: 0 0 5px var(--clr-grey);
 }
+
 @media screen and (max-width: 992px) {
   .box__details {
     height: 95%;

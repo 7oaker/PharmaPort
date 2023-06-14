@@ -194,8 +194,7 @@ contract Pharmaport {
 
     } 
 
-
-     // Function to add a certificate for a product
+    // Function to add a certificate for a product
     function addAuthorisation(
         uint256 _S_id,        //id of Marketing Authorisation Holder (Stakeholder)
 		uint256 _P_id,          //Product ID for the Marketing Authorisation

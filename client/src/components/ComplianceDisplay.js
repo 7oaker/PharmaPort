@@ -11,13 +11,13 @@ const ComplianceDisplay = ({ value, type }) => {
         <img src={noncomp} width='60px' height='60px' alt='Noncompliant' />
       ) : (
         <img
-        src={type === 'GDP' ? gdp : type === 'GMP' ? gmp : noncomp}
-        width='60px'
-        height='60px'
-        alt='Star'
-      />
+          src={type === 'GDP' ? gdp : type === 'GMP' ? gmp : noncomp}
+          width='60px'
+          height='60px'
+          alt='Star'
+        />
       )}
-     
+
     </div>
   );
 };
