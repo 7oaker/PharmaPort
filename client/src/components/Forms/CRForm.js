@@ -100,11 +100,10 @@ const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceRepo
           placeholder="Choose type"
         >
           <option value="">Choose Type</option>
-          <option value="GMP">GMP</option>
-          <option value="GDP">GDP</option>
-          <option value="NonComplianceStatement">Non-Compliance Statement</option>
-          <option value="Incident">Incident</option>
-          <option value="Inspection">Inspection</option>
+          <option value="GMP">Good Manufacturing Practice</option>
+          <option value="GDP">Good Distribution Practice</option>
+          <option value="GPP">Good Pharmacy Practice</option>
+         
         </Form.Select>
       </Form.Group>
 

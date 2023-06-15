@@ -70,10 +70,11 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
           <h4>{stakeholder.category}</h4>
           <p>
             <b>Information</b><br></br>
-            Internal ID:{stakeholder.id.toString()}
+            Internal ID:{stakeholder.id.toString()+" | "}
             Organization ID: {stakeholder.GID}<br></br>
             TYPE: {stakeholder.category}<br></br>
-            Global Location Number: {stakeholder.GLN}<br></br></p>
+            Global Location Number: {stakeholder.GLN}<br></br>
+            Wallet: {stakeholder.wallet}<br></br></p>
           <hr /><p>
             <b>Address</b><br></br>
             Country: {stakeholder.countryCode}<br></br>

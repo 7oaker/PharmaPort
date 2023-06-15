@@ -24,7 +24,7 @@ const Section = ({ title, stakeholders, togglePop }) => {
                             <h4>{stakeholder.name}</h4>
                             <p>ID: {stakeholder.GID}<br></br>TYPE: {stakeholder.category}</p>
 
-                            <strong>Added:
+                            <strong>Added: {" "}
                                 {new Date(Number(stakeholder.regTime.toString() + '000')).toLocaleDateString(
                                     undefined,
                                     {
