@@ -140,21 +140,27 @@ function App() {
       )}
 
       {showStakeholderForm && (
+        <>
         <StakeholderForm provider={provider} account={account} pharmaport={pharmaport} showStakeholderFormPop={showStakeholderFormPop} />
+        </>
       )}
       {toggle && (
+         <>
         <StakholderCard stakeholder={stakeholder} marketingAuthorisations={MAs} complianceReports={CRs} competentAuthorities={CAs} myProducts={products} provider={provider} account={account} pharmaport={pharmaport} togglePop={togglePop} />
+        </>     
       )}
 
-      <h2>Medical Product List</h2>
+      
       {products &&(
+        <>
         <ProductList title={"ProductList"} myProducts={products} />
-
+        </>
       )}
-      <h2>Competent Authorities</h2>
+     
       {CAs &&(
-        <CAList title={"Competent Authorities"} competentAuthorities={CAs} />
-
+        <>
+        <CAList title={"CompetentAuthorities"} competentAuthorities={CAs} />
+        </>
       )}
 
     </div>

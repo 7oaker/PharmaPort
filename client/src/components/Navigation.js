@@ -38,9 +38,9 @@ const Navigation = ({ account, setAccount }) => {
             )}
 
             <ul className='nav__links'>
-                <li><a href="#Manufacturer">Stakeholer List</a></li>
+                <li><a href="#Manufacturer">Verified Stakeholer List</a></li>
+                <li><a href="#ProductList">Authorised Pharmaceutical Products</a></li>
                 <li><a href="#CompetentAuthorities">Competent Authorities</a></li>
-                <li><a href="#ProductList">Product List</a></li>
             </ul>
         </nav>
     );
