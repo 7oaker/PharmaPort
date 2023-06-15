@@ -207,6 +207,13 @@ nav {
   margin-top: 5px;
 }
 
+.box__details p {
+  font-family: "Open Sans";
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
 /* ------------------------------------------------------ */
 /* -- Box for visualising Stakeholders -- */
 

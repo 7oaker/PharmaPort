@@ -36,7 +36,7 @@ const MAForm = ({ stakeholder, provider, account, pharmaport, showMAFormPop }) =
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const signer = provider.getSigner();
+      const signer = provider.getSigner(account);
       let transaction = await pharmaport.connect(signer).addAuthorisation(
         marketingAuthorisation.sId,
         marketingAuthorisation.pId,
@@ -62,7 +62,7 @@ const MAForm = ({ stakeholder, provider, account, pharmaport, showMAFormPop }) =
     } catch (error) {
       console.error(error);
       // Show error message or trigger any other actions
-      myNotification(error, 'Notification', 'failure',);
+      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
 
     }
   };

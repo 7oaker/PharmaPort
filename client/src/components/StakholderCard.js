@@ -40,7 +40,7 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
   const setInactive = async (e) => {
     e.preventDefault();
     try {
-      const signer = provider.getSigner();
+      const signer = provider.getSigner(account);
       let transaction = await pharmaport.connect(signer).setInactive(
         stakeholder.id,
         "Stakeholder"
@@ -99,6 +99,7 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
                 <b>Last Compliance Report</b><br></br>
                 Compliance: {lastStakeholderCR.compliance.toString()}<br></br>
                 Type: {lastStakeholderCR.ComplianceType}<br></br>
+                Signer: {lastStakeholderCR.ComplianceType}<br></br>
                 Date of Inspection: {new Date(Number(lastStakeholderCR.dateOfInspection.toString() + '000')).toLocaleDateString(
                   undefined,
                   {

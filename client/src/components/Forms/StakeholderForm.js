@@ -43,7 +43,7 @@ const StakeholderForm = ({ provider, account, pharmaport, showStakeholderFormPop
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const signer = provider.getSigner();
+      const signer = provider.getSigner(account);
       let transaction = await pharmaport.connect(signer).listStakeholder(
         stakeholder.gid,
         stakeholder.name,
@@ -74,7 +74,7 @@ const StakeholderForm = ({ provider, account, pharmaport, showStakeholderFormPop
     } catch (error) {
       console.error(error);
       // Show error message or trigger any other actions
-      myNotification(error, 'Notification', 'failure',);
+      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
 
     }
   };

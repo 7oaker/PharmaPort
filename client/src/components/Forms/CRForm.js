@@ -36,7 +36,7 @@ const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceRepo
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const signer = provider.getSigner();
+      const signer = provider.getSigner(account);
       let transaction = await pharmaport.connect(signer).addComplianceReport(
         complianceReport.sId,
         complianceReport.cId,
@@ -61,6 +61,7 @@ const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceRepo
     } catch (error) {
       console.error(error);
       // Show error message or trigger any other actions
+      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
     }
   };
 
