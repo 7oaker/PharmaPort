@@ -77,6 +77,6 @@ In a separate terminal execute:
 ##### Noce to high
 eth_sendRawTransaction
   unclean shutting down of the node or unprocessed transactions can lead to high noce which blocks transactions can't be queued when automining.
-  -> to fix this: Open up your MetaMask window and click on the icon in the top right to display accounts. Go to Settings, then Advanced and hit "Delete Activity Tab data" which clears the old history of transactions.
+  -> to fix this: Open up your MetaMask window and click on the icon in the top right to display accounts. Go to Settings, then Advanced and hit "Delete Activity Tab data" which clears the old history of transactions for the used account.
 ### License
 Released under the MIT License. Feel free to use, modify, and distribute this implementation in accordance with the terms of the license.
