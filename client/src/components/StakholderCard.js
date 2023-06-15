@@ -4,9 +4,22 @@ import MAForm from './Forms/MAForm'
 import CRForm from './Forms/CRForm'
 import ComplianceDisplay from './ComplianceDisplay'
 import close from '../assets/close.svg'
+import { Store } from 'react-notifications-component'
 
 const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReports, competentAuthorities, myProducts, provider, account, pharmaport, togglePop }) => {
-
+  const myNotification = (message, title, type) => {
+    Store.addNotification({
+      title: title,
+      type: type,
+      container: 'top-right',
+      message: message,
+      dismiss: {
+        duration: 10000,
+        pauseOnHover: true,
+        onScreen: true,
+      },
+    });
+  };
   //only the last Compliance report is valid
   const getLastAddedComplianceReport = (stakeholderCRs) => {
     let maxDate = 0;
@@ -46,9 +59,12 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
         "Stakeholder"
       );
       await transaction.wait();
+      myNotification(`Following stakholder is now inactive: ${stakeholder.name}`, 'Notification', 'success',);
 
     } catch (error) {
       console.error(error);
+      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+
     }
   };
 
