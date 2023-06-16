@@ -56,12 +56,14 @@ const CRForm = ({ stakeholder, provider, account, pharmaport, showComplianceRepo
         compliance: false,
       });
       console.log(stakeholder.id.toString());
-      showComplianceReportFormPop();
+      //showComplianceReportFormPop();
       // Show success message or trigger any other actions
     } catch (error) {
       console.error(error);
       // Show error message or trigger any other actions
-      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+
+      myNotification(error.message, 'Notification', 'danger');
+      //myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
     }
   };
 

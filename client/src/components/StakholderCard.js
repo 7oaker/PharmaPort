@@ -63,7 +63,8 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
 
     } catch (error) {
       console.error(error);
-      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+      myNotification(error.message, 'Notification', 'danger',);
+      //myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
 
     }
   };
@@ -115,7 +116,7 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
                 <b>Last Compliance Report</b><br></br>
                 Compliance: {lastStakeholderCR.compliance.toString()}<br></br>
                 Type: {lastStakeholderCR.ComplianceType}<br></br>
-                Signer: {lastStakeholderCR.ComplianceType}<br></br>
+                Content: {lastStakeholderCR.content}<br></br>
                 Date of Inspection: {new Date(Number(lastStakeholderCR.dateOfInspection.toString() + '000')).toLocaleDateString(
                   undefined,
                   {
@@ -130,7 +131,7 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
 
               </>
             ) : (
-              <p>No compliance report available.</p>
+              <b>No compliance report available.</b>
             )}</p>
           <hr />
         </div>
@@ -141,7 +142,7 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
           {stakeholderMAs.map((MA, index) => (
 
             <div className="box__ma__container__item" key={index}>
-              <p>ID: {MA.maid.toString()}| | Type: {MA.authorisationType === 'MA' ? 'Marketing Authorisation' : MA.authorisationType === 'ManA' ? 'Manufacturer Authorisation' : MA.authorisationType === 'WDA' ? 'Wholesale Distributor Authorisation' : 'Unknown Authorization Type'} |
+              <p>ID: {MA.maid.toString()} | Type: {MA.authorisationType === 'MA' ? 'Marketing Authorisation' : MA.authorisationType === 'ManA' ? 'Manufacturer Authorisation' : MA.authorisationType === 'WDA' ? 'Wholesale Distributor Authorisation' : 'Unknown Authorization Type'} |
                 Inspection Grant Date: {new Date(Number(MA.inspectionGrantDate.toString() + '000')).toLocaleDateString(
                   undefined,
                   {

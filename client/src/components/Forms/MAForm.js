@@ -57,12 +57,13 @@ const MAForm = ({ stakeholder, provider, account, pharmaport, showMAFormPop }) =
         authorisationType: '',
       });
       console.log(stakeholder.id.toString())
-      showMAFormPop();
+      //showMAFormPop();
 
     } catch (error) {
       console.error(error);
       // Show error message or trigger any other actions
-      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+      myNotification(error.message, 'Notification', 'danger');
+      //myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
 
     }
   };

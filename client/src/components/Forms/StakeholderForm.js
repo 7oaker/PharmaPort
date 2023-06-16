@@ -74,7 +74,8 @@ const StakeholderForm = ({ provider, account, pharmaport, showStakeholderFormPop
     } catch (error) {
       console.error(error);
       // Show error message or trigger any other actions
-      myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+      myNotification(error.message, 'Notification', 'danger');
+     // myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
 
     }
   };

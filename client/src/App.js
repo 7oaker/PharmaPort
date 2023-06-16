@@ -31,6 +31,7 @@ function App() {
   const [products, setProducts] = useState([])
   const [CAs, setCAs] = useState([])
   const [CRs, setCRs] = useState([])
+  const [refresh, setRefresh] = useState(false)
 
   const togglePop = (stakeholder) => {
     setStakeholder(stakeholder)
@@ -108,14 +109,17 @@ function App() {
   }
   useEffect(() => {
     loadBlockchainData()
-
-  }, [showStakeholderForm])
+    console.log("test")
+  }, [refresh])
 
   const showStakeholderFormPop = () => {
     showStakeholderForm ? setShowStakeholderForm(false) : setShowStakeholderForm(true)
 
   }
+  const refreshPop = () => {
+    refresh ? setRefresh(false) : setRefresh(true)
 
+  }
   async function getTransfer() {
   }
   return (
@@ -127,6 +131,9 @@ function App() {
 
       <button className='button__globe' onClick={showStakeholderFormPop}>
         Add Stakeholder
+      </button>
+      <button className='button__globe' onClick={refreshPop}>
+        Load Blockchain Data
       </button>
 
       <h2>Stakeholder List</h2>
