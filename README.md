@@ -77,5 +77,8 @@ In a separate terminal execute:
 ##### Noce to high
 unclean shutting down of the node or unprocessed transactions can lead to high noce which blocks transactions can't be queued when automining.
 -> to fix this: Clear the Transaction Hisotry for the used accoung: Open MetaMask window -> Settings -> Advanced and hit "Delete Activity Tab data"
+##### Unrecognised selector
+The local hardhat node can emmit eth_call errors as this is a hardhat/metamask integration bug currently: https://github.com/MetaMask/metamask-extension/issues/14963
+Transactions will still pass and this is considered as test net bug only
 ### License
 Released under the MIT License. Feel free to use, modify, and distribute this implementation in accordance with the terms of the license.
