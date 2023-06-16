@@ -61,9 +61,10 @@ const MAForm = ({ stakeholder, provider, account, pharmaport, showMAFormPop }) =
 
     } catch (error) {
       console.error(error);
-      // Show error message or trigger any other actions
-      myNotification(error.message, 'Notification', 'danger');
-      //myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+      // Show error message or trigger any other actions (Internal JSON-RPC error. = no permissions)
+      if(error.message === "Internal JSON-RPC error."){
+        myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+    } else {myNotification(error.message, 'Notification', 'danger');}
 
     }
   };

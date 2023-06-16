@@ -63,8 +63,9 @@ const StakholderCard = ({ stakeholder, marketingAuthorisations, complianceReport
 
     } catch (error) {
       console.error(error);
-      myNotification(error.message, 'Notification', 'danger',);
-      //myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+      if(error.message === "Internal JSON-RPC error."){
+        myNotification("Missing Authorisation for this Action!", 'Notification', 'danger',);
+    } else {myNotification(error.message, 'Notification', 'danger');}
 
     }
   };
